@@ -18,6 +18,30 @@
      <title>BootFlix</title>
      </head>
      <body>
-         
+         <header>
+             <div class="campo-ricerca">
+                 <input class="campo-ricerca-input" type="text" placeholder="Cerca un titolo">
+                 <button class="bottone-ricerca" type="button" name="button"> Cerca </button>
+             </div>
+
+         </header>
+
+         <main>
+             <div class="container">
+
+             </div>
+         </main>
+
+         <script id="template" type="text/x-handlebars-template">
+
+             <div class="movie" data-genere = "{{genere}}">
+                 <p> Il titolo del film è = {{ titolo }} </p>
+                 <p> Il titolo originale del film è = {{ titoloOriginale }} </p>
+                 <p> La lingua è = {{ lingua }} </p>
+                 <p> Ha ricevuto {{ voto }} come voto </p> <br>
+
+             </div>
+
+         </script>
      </body>
  </html>
