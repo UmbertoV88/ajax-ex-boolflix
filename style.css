@@ -5,14 +5,41 @@
     font-family: sans-serif;
 }
 header {
-    height: 50px;
+    height: 60px;
     width: 100%;
     background-color: black;
     position: relative;
 }
 
-.campo-ricerca {
+.container {
+    margin: 50px 100px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.movie {
+    width: 250px;
+    height: 300px;
+    border: 1px black dashed;
+    margin-bottom: 30px;
+    padding: 20px;
+
+}
+
+.heder-left {
+    width: 50%;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    left: 30px;
+
+}
+
+.header-right {
     position: absolute;
     right: 10px;
-    top: calc(30px - 20px);
+    top: calc(40px - 20px);
 }

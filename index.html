@@ -19,11 +19,14 @@
      </head>
      <body>
          <header>
-             <div class="campo-ricerca">
+             <div class="header-left">
+                 <img class="logo" src="https://fontmeme.com/permalink/191218/09e96830d99a345ce7c84a9b96313d64.png" alt="">
+
+             </div>
+             <div class="header-right">
                  <input class="campo-ricerca-input" type="text" placeholder="Cerca un titolo">
                  <button class="bottone-ricerca" type="button" name="button"> Cerca </button>
              </div>
-
          </header>
 
          <main>
@@ -35,11 +38,12 @@
          <script id="template" type="text/x-handlebars-template">
 
              <div class="movie" data-genere = "{{genere}}">
-                 <p> Il titolo del film è = {{ titolo }} </p>
-                 <p> Il titolo originale del film è = {{ titoloOriginale }} </p>
-                 <p> La lingua è = {{ lingua }} </p>
-                 <p> Ha ricevuto {{ voto }} come voto </p> <br>
-
+                 <p> Titolo : {{ titolo }} </p>
+                 <p> Titolo originale : {{ titoloOriginale }} </p>
+                 <p> Lingua : {{{ lingua }}} </p>
+                 <p> Voto :  {{ voto }}  </p>
+                 <span> Stelle : {{{ stella }}} </span> <br>
+                 <p>------------------------------------</p> <br>
              </div>
 
          </script>
