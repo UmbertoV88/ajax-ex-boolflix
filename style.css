@@ -11,6 +11,12 @@ header {
     position: relative;
 }
 
+li {
+    margin: 5px 0;
+    list-style: none;
+    position: relative;
+}
+
 .container {
     margin: 50px 100px;
     display: flex;
@@ -25,6 +31,10 @@ header {
     margin-bottom: 30px;
     padding: 20px;
 
+}
+
+.fas.fa-star {
+    color: #f1c40f;
 }
 
 .heder-left {
@@ -42,4 +52,10 @@ header {
     position: absolute;
     right: 10px;
     top: calc(40px - 20px);
+}
+
+.bandieraLingua {
+    position: absolute;
+    left: 70px;
+    bottom: -4px;
 }

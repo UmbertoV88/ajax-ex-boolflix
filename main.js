@@ -70,11 +70,11 @@ $(document).ready(function() {
 
 function bandiere(lang) {
     if (lang == "en") {
-        var icona = '<img src="http://icons.iconarchive.com/icons/icons-land/vista-flags/16/United-States-Flag-1-icon.png" alt="">'
+        var icona = '<img class="bandieraLingua" src="http://icons.iconarchive.com/icons/icons-land/vista-flags/24/United-States-Flag-1-icon.png" alt="">'
     }else if (lang == "es"){
-        var icona = '<img src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/16/Spain-icon.png">'
+        var icona = '<img class="bandieraLingua" src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/24/Spain-icon.png">'
     }else{
-        var icona = '<img src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/16/Italy-icon.png">'
+        var icona = '<img class="bandieraLingua" src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/24/Italy-icon.png">'
     };
     return icona;
 
