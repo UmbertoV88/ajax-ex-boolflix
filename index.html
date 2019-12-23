@@ -36,7 +36,6 @@
          </main>
 
          <script id="template" type="text/x-handlebars-template">
-
              <div class="movie" data-genere = "{{genere}}">
                  <ul>
                      <li> Titolo : {{ titolo }} </li>
@@ -44,10 +43,21 @@
                      <li> Lingua : {{{ lingua }}} </li>
                      <li> Voto :  {{ voto }}  </li>
                      <span> Stelle : {{{ stella }}} </span> <br>
-                     <p>------------------------------------</p> <br>
                  </ul>
              </div>
+         </script>
 
+             <script id="templateSerietv" type="text/x-handlebars-template">
+                 <div class="serietv" data-genere = "{{genere}}">
+                     <ul>
+                         <li> SERIE </li>
+                         <li> Titolo : {{ titoloSerie }} </li>
+                         <li> Titolo originale : {{ titoloOriginaleSerie }} </li>
+                         <li> Lingua : {{{ linguaSerie }}} </li>
+                         <li> Voto :  {{ votoSerie }}  </li>
+                         <span> Stelle : {{{ stellaSerie }}} </span> <br>
+                     </ul>
+                 </div>
          </script>
      </body>
  </html>

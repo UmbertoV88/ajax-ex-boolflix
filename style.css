@@ -24,7 +24,7 @@ li {
     justify-content: space-around;
 }
 
-.movie {
+.movie, .serietv {
     width: 250px;
     height: 300px;
     border: 1px black dashed;
