@@ -17,11 +17,20 @@ li {
     position: relative;
 }
 
-.container {
+.container_film,
+.container_serie {
     margin: 50px 100px;
     display: flex;
     flex-flow: wrap;
     justify-content: space-around;
+}
+
+.testata {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin: 25px;
+    border-style: double;
 }
 
 .movie, .serietv {
