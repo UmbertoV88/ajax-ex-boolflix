@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    var api_url_base = "https://api.themoviedb.org/3" ;
+    var api_key = "7058fdc9b87af5cb2dbc92bd22e4e43c";
+    var image_url_base = "https://image.tmdb.org/t/p/";
+    var image_size = "w342";
+
+    // Handlebars
     var templateHtml = $("#template").html();
     var templateFunction = Handlebars.compile(templateHtml);
 
@@ -23,9 +29,9 @@ $(document).ready(function() {
         var ricercaFilm = $(".campo-ricerca-input").val();
         $(".container").text(" ");
         $.ajax({
-            url :"https://api.themoviedb.org/3/search/movie",
+            url : api_url_base + "/search/movie",
             data : {
-                api_key : "7058fdc9b87af5cb2dbc92bd22e4e43c",
+                api_key : api_key,
                 query : ricercaFilm.toLowerCase()
             },
             method : "get",
@@ -39,6 +45,7 @@ $(document).ready(function() {
                     var titoloOriginale = film[i].original_title;
                     var lingua = film[i].original_language;
                     var voto = film[i].vote_average;
+                    var immagine_locandina = image_url_base + image_size + film[i].poster_path;
                     var stella = Math.round(voto / 2);
                     var htmlStellaVuota =
                     '<i class="far fa-star"></i>'.repeat(5 - stella);
@@ -64,7 +71,8 @@ $(document).ready(function() {
                         titoloOriginale : titoloOriginale,
                         lingua : imgBandiera,
                         voto : voto,
-                        stella : htmlStellaPiena + htmlStellaVuota
+                        stella : htmlStellaPiena + htmlStellaVuota,
+                        image : immagine_locandina
                     };
 
 
@@ -84,9 +92,9 @@ $(document).ready(function() {
         var ricercaSerie = $(".campo-ricerca-input").val();
         $(".container").text(" ");
         $.ajax({
-            url :"https://api.themoviedb.org/3/search/tv",
+            url :api_url_base + "/search/tv",
             data : {
-                api_key : "7058fdc9b87af5cb2dbc92bd22e4e43c",
+                api_key : api_key,
                 query : ricercaSerie.toLowerCase()
             },
             method : "get",
@@ -130,17 +138,17 @@ $(document).ready(function() {
     };
 
 
-function bandiere(lang) {
-    if (lang == "en") {
-        var icona = '<img class="bandieraLingua" src="http://icons.iconarchive.com/icons/icons-land/vista-flags/24/United-States-Flag-1-icon.png" alt="">'
-    }else if (lang == "es"){
-        var icona = '<img class="bandieraLingua" src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/24/Spain-icon.png">'
-    }else{
-        var icona = '<img class="bandieraLingua" src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/24/Italy-icon.png">'
-    };
-    return icona;
+    function bandiere(lang) {
+        if (lang == "en") {
+            var icona = '<img class="bandieraLingua" src="http://icons.iconarchive.com/icons/icons-land/vista-flags/24/United-States-Flag-1-icon.png" alt="">'
+        }else if (lang == "es"){
+            var icona = '<img class="bandieraLingua" src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/24/Spain-icon.png">'
+        }else{
+            var icona = '<img class="bandieraLingua" src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/24/Italy-icon.png">'
+        };
+        return icona;
 
-};
+    };
 
 
 
