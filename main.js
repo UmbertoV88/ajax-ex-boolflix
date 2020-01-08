@@ -45,7 +45,12 @@ $(document).ready(function() {
                     var titoloOriginale = film[i].original_title;
                     var lingua = film[i].original_language;
                     var voto = film[i].vote_average;
-                    var immagine_locandina = image_url_base + image_size + film[i].poster_path;
+                    if(film[i].poster_path != null) {
+                        var immagine_locandina = image_url_base + image_size + film[i].poster_path;
+                    }else{
+                        var immagine_locandina = 'https://s3-ap-southeast-1.amazonaws.com/silverscreen-photos/1534489151m000001.jpg'
+                    };
+
                     var stella = Math.round(voto / 2);
                     var htmlStellaVuota =
                     '<i class="far fa-star"></i>'.repeat(5 - stella);
@@ -108,6 +113,13 @@ $(document).ready(function() {
                     var titoloOriginale = film[i].original_name;
                     var lingua = film[i].original_language;
                     var voto = film[i].vote_average;
+
+                    if(film[i].poster_path != null) {
+                        var immagine_locandina = image_url_base + image_size + film[i].poster_path;
+                    }else{
+                        var immagine_locandina = 'https://s3-ap-southeast-1.amazonaws.com/silverscreen-photos/1534489151m000001.jpg'
+                    };
+                    
                     var stella = Math.round(voto / 2);
                     var htmlStellaVuota =
                     '<i class="far fa-star"></i>'.repeat(5 - stella);
@@ -121,7 +133,8 @@ $(document).ready(function() {
                         titoloOriginale : titoloOriginale,
                         lingua : imgBandiera,
                         voto : voto,
-                        stella : htmlStellaPiena + htmlStellaVuota
+                        stella : htmlStellaPiena + htmlStellaVuota,
+                        image : immagine_locandina
                     };
 
 
